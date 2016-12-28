@@ -77,8 +77,8 @@ func main() {
 	nodetoolPath := flag.String("nodetool", "/usr/bin/nodetool", "path to cassandra nodetool")
 	namespace := flag.String("namespace", "default", "the kubernetes namespace")
 	podName := flag.String("pod", "", "the kubernetes pod name")
-	populateHostId := flag.Bool("populate", true, "populate the k8s annotations with our host ID")
-	fetchHostId := flag.Bool("fetch", true, "fetch our host ID from k8s annotations")
+	populateHostId := flag.Bool("populate", false, "populate the k8s annotations with our host ID")
+	fetchHostId := flag.Bool("fetch", false, "fetch our host ID from k8s annotations")
 	annotationsPrefix := flag.String("prefix", "cassandra", "the prefix for the annotations tracking host IDs")
 	flag.Parse()
 
